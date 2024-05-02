@@ -16,4 +16,7 @@ SELECT department_id, COUNT(*) FROM degrees GROUP BY department_id;
 1. Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia
 SELECT * FROM students INNER JOIN degrees ON students.degree_id = degrees . id WHERE degrees . name = 'Corso di Laurea in Economia';
 
-2. 
+2. Selezionare tutti i Corsi di Laurea Magistrale del Dipartimento di Neuroscienze
+SELECT degrees.* FROM degrees JOIN departments ON degrees.department_id = department_id WHERE departments.name = 'Dipartimento di Neuroscienze' AND degrees.level = 'magistrale';
+
+
